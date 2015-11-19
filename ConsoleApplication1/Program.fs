@@ -8,12 +8,14 @@
 open System
 open EventSource4Net
 open System.Threading
+open ClassLibrary1
 [<EntryPoint>]
 let main argv =
 //    printfn "%s" x.ToString()
     let uri = new Uri("http://api.duel.gg/games/live/")
     let es = new EventSource(uri, 5000)
     File2.x.ToString() |> printfn "K => %s"
+    Class1.wat |> printfn "X => %s"
     es.StateChanged.Add(fun e -> Console.WriteLine("New state: " + e.State.ToString()))
     es.EventReceived.Add(fun e -> Console.WriteLine("--------- Msg received -----------\n" + e.Message.ToString()))
     let ct = new CancellationToken()
