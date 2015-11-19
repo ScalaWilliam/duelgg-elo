@@ -61,6 +61,7 @@
     <Compile Include="System.Net.Http.fs" />
     <None Include="recent.json" />
     <Compile Include="File1.fs" />
+    <Compile Include="File2.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
   <ItemGroup>
